@@ -12,7 +12,11 @@ const ResearchGallery = () => {
     "/lovable-uploads/ee434fc6-2191-4aa7-88d1-81987b8031c6.png",
     "/lovable-uploads/5c24b7e9-89f1-40a7-b730-69a06c3f5f14.png",
     "/lovable-uploads/cc025f06-642f-450a-8895-b84802af07fd.png",
-    "/lovable-uploads/32d65cee-0c8c-4e06-b076-5ff31a0c1b7d.png"
+    "/lovable-uploads/32d65cee-0c8c-4e06-b076-5ff31a0c1b7d.png",
+    "/lovable-uploads/0c676df0-a0f9-4714-8f27-3f883b14f6a6.png",
+    "/lovable-uploads/df0a4b4e-a8ec-43a3-951c-98827c5af899.png",
+    "/lovable-uploads/7da41383-a701-4cf4-a847-6cf499617339.png",
+    "/lovable-uploads/934ceac3-3a8e-47cf-9705-32a22f9c10fe.png"
   ];
 
   const nextImage = () => {
@@ -26,7 +30,7 @@ const ResearchGallery = () => {
   return (
     <div className="mt-8 animate-fade-in">
       <h4 className="text-lg font-semibold mb-4">Research Paper Gallery</h4>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 animate-fade-in">
         {images.map((img, idx) => (
           <Dialog key={idx}>
             <DialogTrigger asChild>
@@ -38,7 +42,7 @@ const ResearchGallery = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Maximize2 className="text-white h-5 w-5" />
+                  <Maximize2 className="text-white h-5 w-5 animate-scale-in" />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs p-1 text-center">
                   Page {idx + 1}
@@ -63,7 +67,7 @@ const ResearchGallery = () => {
                     <img 
                       src={images[currentImage]} 
                       alt={`Research paper page ${currentImage + 1}`} 
-                      className="max-h-[80vh] w-auto mx-auto"
+                      className="max-h-[80vh] w-auto mx-auto animate-fade-in"
                     />
                   </div>
                   
@@ -75,7 +79,7 @@ const ResearchGallery = () => {
                     variant="ghost" 
                     size="icon" 
                     onClick={prevImage}
-                    className="absolute left-2 bg-black/30 hover:bg-black/50 text-white rounded-full h-8 w-8"
+                    className="absolute left-2 bg-black/30 hover:bg-black/50 text-white rounded-full h-8 w-8 animate-fade-in"
                   >
                     <ChevronLeft size={16} />
                   </Button>
@@ -84,7 +88,7 @@ const ResearchGallery = () => {
                     variant="ghost" 
                     size="icon" 
                     onClick={nextImage}
-                    className="absolute right-2 bg-black/30 hover:bg-black/50 text-white rounded-full h-8 w-8"
+                    className="absolute right-2 bg-black/30 hover:bg-black/50 text-white rounded-full h-8 w-8 animate-fade-in"
                   >
                     <ChevronRight size={16} />
                   </Button>

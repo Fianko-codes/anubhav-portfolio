@@ -3,8 +3,9 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Award, LineChart, BookOpen } from 'lucide-react';
+import { ExternalLink, Award, LineChart, BookOpen, Quote } from 'lucide-react';
 import ResearchGallery from './ResearchGallery';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const ResearchPaper = () => {
   return (
@@ -89,6 +90,28 @@ const ResearchPaper = () => {
               in average waiting times, enhancing the overall public transportation experience. This research won the National Mathematical 
               Modeling Challenge 2025, validating its innovative approach and real-world relevance.
             </p>
+          </div>
+          
+          {/* Quote section with beautiful background */}
+          <div className="mt-6 rounded-lg overflow-hidden relative">
+            <div className="bg-gradient-to-r from-primary/30 via-accent/20 to-blue-400/30 p-6 relative">
+              <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiPjwvcmVjdD4KPHBhdGggZD0iTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVoiIHN0cm9rZT0iIzIxMiIgc3Ryb2tlLW9wYWNpdHk9IjAuMDgiPjwvcGF0aD4KPC9zdmc+')] opacity-70"></div>
+              <div className="relative z-10">
+                <div className="flex items-center mb-4">
+                  <Avatar className="h-12 w-12 mr-4 ring-2 ring-primary/40 animate-fade-in">
+                    <AvatarImage src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/220px-Albert_Einstein_Head.jpg" alt="Albert Einstein" />
+                    <AvatarFallback>AE</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h4 className="font-medium">Albert Einstein</h4>
+                    <p className="text-xs text-muted-foreground">Theoretical Physicist</p>
+                  </div>
+                </div>
+                <blockquote className="italic text-sm border-l-2 border-primary/50 pl-4 py-1 animate-fade-in">
+                  "The more I learn, the more I realize how much I don't know."
+                </blockquote>
+              </div>
+            </div>
           </div>
           
           <ResearchGallery />
