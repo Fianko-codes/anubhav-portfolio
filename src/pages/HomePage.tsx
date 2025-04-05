@@ -107,10 +107,14 @@ const HomePage = () => {
                 but discovering math changed everything for me. Now I'm diving into coding and problem-solving, 
                 with a growing interest in fitness and personal development.
               </p>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-4">
                 My philosophy is simple: Keep moving, keep learning, and make each step count, even if I don't always have a clear plan.
                 Life's more fun when you're just doing your thing.
               </p>
+              <blockquote className="border-l-2 border-primary pl-4 italic text-muted-foreground mb-8">
+                "The more I learn, the more I realize how much I don't know."
+                <cite className="block text-xs mt-1">— Albert Einstein</cite>
+              </blockquote>
               <Button asChild>
                 <Link to="/about">
                   Learn More About Me
@@ -120,9 +124,9 @@ const HomePage = () => {
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
               <div className="aspect-square w-full max-w-md mx-auto rounded-2xl bg-gradient-to-br from-primary/30 via-accent/20 to-blue-400/10 p-1">
-                <div className="h-full w-full rounded-xl glass flex items-center justify-center">
+                <div className="h-full w-full rounded-xl glass flex items-center justify-center p-6">
                   <p className="text-center text-muted-foreground italic px-6">
-                    "I'm figuring things out as I go, but that's what makes the journey interesting."
+                    "Yet, as the sun begins its descent, casting long shadows across the land, a sense of despair creeps in. I fear that I am becoming a forgotten relic, a footnote in the grand story of life."
                   </p>
                 </div>
               </div>

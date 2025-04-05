@@ -3,6 +3,7 @@ import React from 'react';
 import SectionHeader from '@/components/SectionHeader';
 import { Card, CardContent } from '@/components/ui/card';
 import { BookOpen, Code, Calculator, Dumbbell, Brain, BookText } from 'lucide-react';
+import BookCollection from '@/components/BookCollection';
 
 const AboutPage = () => {
   return (
@@ -34,6 +35,10 @@ const AboutPage = () => {
               <p>
                 Beyond academics, I've been developing a disciplined approach to fitness - not just for 
                 physical appearance, but for the mental clarity and sense of accomplishment it brings.
+              </p>
+              <p className="italic">
+                "The more I learn, the more I realize how much I don't know." — This quote from Einstein 
+                resonates deeply with my approach to knowledge and learning.
               </p>
             </div>
           </div>
@@ -122,7 +127,9 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div>
+        <BookCollection />
+
+        <div className="mt-16">
           <h3 className="text-2xl font-bold mb-6">My Values</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -153,6 +160,15 @@ const AboutPage = () => {
               </p>
             </div>
           </div>
+          
+          <Card className="bg-secondary border-none mt-8">
+            <CardContent className="p-6 italic text-muted-foreground">
+              <p>
+                Yet, as the sun begins its descent, casting long shadows across the land, a sense of despair creeps in. 
+                I fear that I am becoming a forgotten relic, a footnote in the grand story of life.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>

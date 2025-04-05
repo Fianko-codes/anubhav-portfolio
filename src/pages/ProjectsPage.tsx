@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calculator, Code, FileText, ExternalLink } from 'lucide-react';
+import ResearchPaper from '@/components/ResearchPaper';
 
 const ProjectsPage = () => {
   const projects = [
@@ -48,6 +49,11 @@ const ProjectsPage = () => {
           title="Projects & Portfolio" 
           subtitle="A showcase of my work and ongoing endeavors"
         />
+
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold mb-8">Featured Research</h3>
+          <ResearchPaper />
+        </div>
 
         <div className="mb-16">
           <h3 className="text-2xl font-bold mb-8">Current Projects</h3>
