@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Maximize2 } from 'lucide-react';
 
 const ResearchGallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -24,20 +24,21 @@ const ResearchGallery = () => {
   };
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 animate-fade-in">
       <h4 className="text-lg font-semibold mb-4">Research Paper Gallery</h4>
-      <div className="grid grid-cols-3 gap-2">
-        {images.slice(0, 3).map((img, idx) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        {images.map((img, idx) => (
           <Dialog key={idx}>
             <DialogTrigger asChild>
-              <div className="cursor-pointer relative group overflow-hidden rounded-md">
+              <div className="cursor-pointer relative group overflow-hidden rounded-md transform transition-all duration-300 hover:scale-105">
                 <img 
                   src={img} 
                   alt={`Research paper page ${idx + 1}`} 
-                  className="w-full h-32 object-cover transition-transform group-hover:scale-105"
+                  className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white text-sm">View</span>
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Maximize2 className="text-white h-5 w-5" />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs p-1 text-center">
                   Page {idx + 1}
