@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calculator, Code, FileText, ExternalLink } from 'lucide-react';
-import ResearchPaper from '@/components/ResearchPaper';
+import ResearchSummary from '@/components/ResearchSummary';
+import BookCollection from '@/components/BookCollection';
 
 const ProjectsPage = () => {
   const projects = [
@@ -52,7 +53,7 @@ const ProjectsPage = () => {
 
         <div className="mb-16">
           <h3 className="text-2xl font-bold mb-8">Featured Research</h3>
-          <ResearchPaper />
+          <ResearchSummary />
         </div>
 
         <div className="mb-16">
@@ -89,6 +90,8 @@ const ProjectsPage = () => {
             ))}
           </div>
         </div>
+
+        <BookCollection />
 
         <div>
           <h3 className="text-2xl font-bold mb-6">Future Explorations</h3>
