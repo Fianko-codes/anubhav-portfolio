@@ -14,7 +14,7 @@ const ContactPage = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          <Card className="bg-secondary border-none">
+          <Card className="bg-secondary border-none hover:bg-secondary/80 transition-colors">
             <CardContent className="flex items-center gap-4 p-6">
               <div className="bg-background p-3 rounded-full">
                 <Mail className="h-6 w-6 text-primary" />
@@ -28,7 +28,7 @@ const ContactPage = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-secondary border-none">
+          <Card className="bg-secondary border-none hover:bg-secondary/80 transition-colors">
             <CardContent className="flex items-center gap-4 p-6">
               <div className="bg-background p-3 rounded-full">
                 <Instagram className="h-6 w-6 text-primary" />
@@ -47,7 +47,7 @@ const ContactPage = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-secondary border-none">
+          <Card className="bg-secondary border-none hover:bg-secondary/80 transition-colors">
             <CardContent className="flex items-center gap-4 p-6">
               <div className="bg-background p-3 rounded-full">
                 <MapPin className="h-6 w-6 text-primary" />
