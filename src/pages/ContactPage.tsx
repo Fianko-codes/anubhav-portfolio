@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { toast } from '@/components/ui/use-toast';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, Instagram } from 'lucide-react';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -72,12 +72,31 @@ const ContactPage = () => {
               <Card className="bg-secondary border-none">
                 <CardContent className="flex items-center gap-4 p-6">
                   <div className="bg-background p-3 rounded-full">
+                    <Instagram className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium mb-1">Instagram</h4>
+                    <a 
+                      href="https://instagram.com/anubhavprasai123" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      @anubhavprasai123
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-secondary border-none">
+                <CardContent className="flex items-center gap-4 p-6">
+                  <div className="bg-background p-3 rounded-full">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Location</h4>
                     <p className="text-muted-foreground">
-                      Nepal
+                      Newton's Education Academy, Jhapa, Nepal
                     </p>
                   </div>
                 </CardContent>

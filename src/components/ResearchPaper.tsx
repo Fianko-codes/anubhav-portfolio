@@ -2,8 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { ExternalLink, Award, LineChart, BookOpen, Quote } from 'lucide-react';
+import { LineChart, BookOpen, Award } from 'lucide-react';
 import ResearchGallery from './ResearchGallery';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
@@ -116,15 +115,8 @@ const ResearchPaper = () => {
           
           <ResearchGallery />
           
-          <div className="mt-6 flex justify-center">
-            <Button variant="outline" className="group" disabled>
-              <ExternalLink className="h-4 w-4 mr-2 group-hover:text-primary transition-colors" />
-              View Full Paper (Available upon request)
-            </Button>
-          </div>
-          
           <div className="mt-2 text-xs text-center text-muted-foreground italic">
-            Watermarked preview only. Please contact me directly for academic or research purposes.
+            Please contact me directly for academic or research purposes.
           </div>
         </div>
       </div>
