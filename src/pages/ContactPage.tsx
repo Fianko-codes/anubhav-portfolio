@@ -26,20 +26,28 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      setIsSubmitting(false);
-    }, 1500);
+    // Use the mailto: protocol to open the user's email client
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`);
+    const mailtoLink = `mailto:anubhavprasai123@gmail.com?subject=${subject}&body=${body}`;
+    
+    window.open(mailtoLink, '_blank');
+    
+    // Show success toast
+    toast({
+      title: "Email client opened",
+      description: "Your message has been prepared in your email client. Please send it from there.",
+    });
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+    
+    setIsSubmitting(false);
   };
 
   return (

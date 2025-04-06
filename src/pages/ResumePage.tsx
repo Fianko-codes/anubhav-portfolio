@@ -1,12 +1,19 @@
-
 import React from 'react';
 import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { FileDown } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
 
 const ResumePage = () => {
+  const handleDownload = () => {
+    toast({
+      title: "Coming Soon",
+      description: "The PDF version will be available soon. Please check back later.",
+    });
+  };
+
   return (
     <div className="min-h-screen pt-24 pb-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,12 +22,12 @@ const ResumePage = () => {
             title="Resume" 
             subtitle="My educational background and achievements"
           />
-          <Button className="hidden sm:flex">
+          <Button onClick={handleDownload} className="hidden sm:flex">
             <FileDown className="mr-2 h-4 w-4" /> Download PDF
           </Button>
         </div>
 
-        <Button className="w-full mb-8 sm:hidden">
+        <Button onClick={handleDownload} className="w-full mb-8 sm:hidden">
           <FileDown className="mr-2 h-4 w-4" /> Download PDF
         </Button>
 
@@ -45,9 +52,9 @@ const ResumePage = () => {
                       <h4 className="font-medium">High School (Grade 11)</h4>
                       <span className="text-sm text-muted-foreground">Present</span>
                     </div>
-                    <p className="text-muted-foreground text-sm">School Name, Nepal</p>
+                    <p className="text-muted-foreground text-sm">Newton's Education Academy, Jhapa, Nepal</p>
                     <p className="text-muted-foreground text-sm mt-2">
-                      Focus on Mathematics and Computer Science
+                      Focus on Mathematics, Physics, Chemistry, and Computer Science
                     </p>
                   </div>
                   
@@ -58,7 +65,7 @@ const ResumePage = () => {
                       <h4 className="font-medium">Secondary Education</h4>
                       <span className="text-sm text-muted-foreground">2022</span>
                     </div>
-                    <p className="text-muted-foreground text-sm">Previous School, Nepal</p>
+                    <p className="text-muted-foreground text-sm">Newton's Education Academy, Jhapa, Nepal</p>
                   </div>
                 </div>
               </CardContent>
