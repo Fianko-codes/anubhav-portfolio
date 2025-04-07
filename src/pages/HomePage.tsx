@@ -4,14 +4,23 @@ import { ArrowRight, Cpu, BookOpen, Dumbbell } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Link } from 'react-router-dom';
+import { useElementOnScreen } from '@/hooks/useElementOnScreen';
+import GraphingCalculator from '@/components/GraphingCalculator';
+import CodingChallenge from '@/components/CodingChallenge';
 
 const HomePage = () => {
+  const [heroRef, heroVisible] = useElementOnScreen({ threshold: 0.1 });
+  const [interestsRef, interestsVisible] = useElementOnScreen({ threshold: 0.1 });
+  const [calculatorRef, calculatorVisible] = useElementOnScreen({ threshold: 0.1 });
+  const [aboutRef, aboutVisible] = useElementOnScreen({ threshold: 0.1 });
+  const [challengeRef, challengeVisible] = useElementOnScreen({ threshold: 0.1 });
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="h-screen flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 animate-fade-in">
+      <section className="h-screen flex items-center" ref={heroRef}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+          <div className="md:w-1/2">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Hi, I'm <span className="text-gradient">Anubhav Prasai</span>
             </h1>
@@ -42,9 +51,43 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Interactive Calculator Section */}
+      <section className="py-20 bg-background" ref={calculatorRef}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-100 ${calculatorVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Interactive Math Tools</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Explore mathematical concepts with these interactive tools
+            </p>
+            <div className="h-1 w-20 bg-primary mt-4 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="mt-8">
+            <GraphingCalculator />
+          </div>
+        </div>
+      </section>
+
+      {/* Coding Challenge Section */}
+      <section className="py-20 bg-card" ref={challengeRef}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-200 ${challengeVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Test Your Coding Skills</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Try solving these programming challenges to sharpen your skills
+            </p>
+            <div className="h-1 w-20 bg-primary mt-4 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="mt-8">
+            <CodingChallenge />
+          </div>
+        </div>
+      </section>
+
       {/* Featured Interests */}
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-card" ref={interestsRef}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-300 ${interestsVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What Drives Me</h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -54,7 +97,7 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-secondary border-none animate-scale-in">
+            <Card className="bg-secondary border-none hover:scale-105 transition-transform duration-300">
               <CardHeader>
                 <Cpu className="h-8 w-8 text-primary mb-4" />
                 <CardTitle>Mathematics & Coding</CardTitle>
@@ -67,7 +110,7 @@ const HomePage = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-secondary border-none animate-scale-in" style={{ animationDelay: "0.1s" }}>
+            <Card className="bg-secondary border-none hover:scale-105 transition-transform duration-300">
               <CardHeader>
                 <BookOpen className="h-8 w-8 text-primary mb-4" />
                 <CardTitle>Books & Philosophy</CardTitle>
@@ -80,7 +123,7 @@ const HomePage = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-secondary border-none animate-scale-in" style={{ animationDelay: "0.2s" }}>
+            <Card className="bg-secondary border-none hover:scale-105 transition-transform duration-300">
               <CardHeader>
                 <Dumbbell className="h-8 w-8 text-primary mb-4" />
                 <CardTitle>Fitness Journey</CardTitle>
@@ -97,8 +140,8 @@ const HomePage = () => {
       </section>
 
       {/* About Preview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20" ref={aboutRef}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-400 ${aboutVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-6">My Journey So Far</h2>
