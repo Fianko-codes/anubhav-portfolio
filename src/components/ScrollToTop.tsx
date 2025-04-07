@@ -6,13 +6,18 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
   
   useEffect(() => {
-    // Add a small timeout to ensure the DOM is ready
-    const timeoutId = setTimeout(() => {
+    // Using requestAnimationFrame to ensure the DOM has updated
+    const scrollToTop = () => {
       window.scrollTo({
         top: 0,
-        behavior: "smooth" // This makes the scroll animation smooth
+        behavior: "smooth"
       });
-    }, 0);
+    };
+    
+    // Ensure this runs after any DOM updates
+    const timeoutId = setTimeout(() => {
+      requestAnimationFrame(scrollToTop);
+    }, 100);
     
     return () => clearTimeout(timeoutId);
   }, [pathname]);
