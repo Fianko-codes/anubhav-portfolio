@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SectionHeader from '@/components/SectionHeader';
 import { Card, CardContent } from '@/components/ui/card';
@@ -36,7 +37,7 @@ const AboutPage = () => {
                 physical appearance, but for the mental clarity and sense of accomplishment it brings.
               </p>
               <p className="italic">
-                "The more I learn, the more I realize how much I don't know." — This quote from Einstein 
+                "True education is a path of constant discovery, where each answer leads to deeper questions." — This quote from Socrates 
                 resonates deeply with my approach to knowledge and learning.
               </p>
             </div>

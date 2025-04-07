@@ -112,8 +112,8 @@ const HomePage = () => {
                 Life's more fun when you're just doing your thing.
               </p>
               <blockquote className="border-l-2 border-primary pl-4 italic text-muted-foreground mb-8">
-                "The more I learn, the more I realize how much I don't know."
-                <cite className="block text-xs mt-1">— Albert Einstein</cite>
+                "True education is a path of constant discovery, where each answer leads to deeper questions."
+                <cite className="block text-xs mt-1">— Socrates</cite>
               </blockquote>
               <Button asChild>
                 <Link to="/about">
@@ -126,7 +126,7 @@ const HomePage = () => {
               <div className="aspect-square w-full max-w-md mx-auto rounded-2xl bg-gradient-to-br from-primary/30 via-accent/20 to-blue-400/10 p-1">
                 <div className="h-full w-full rounded-xl glass flex items-center justify-center p-6">
                   <p className="text-center text-muted-foreground italic px-6">
-                    "Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding."
+                    "Yet, as the sun begins its descent, casting long shadows across the land, a sense of despair creeps in. I fear that I am becoming a forgotten relic, a footnote in the grand story of life."
                   </p>
                 </div>
               </div>
