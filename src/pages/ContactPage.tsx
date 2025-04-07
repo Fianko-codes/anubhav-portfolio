@@ -55,7 +55,7 @@ const ContactPage = () => {
               <div>
                 <h4 className="font-medium mb-1">Location</h4>
                 <p className="text-muted-foreground">
-                  Newton's Education Academy, Jhapa, Nepal
+                  Jhapa, Nepal
                 </p>
               </div>
             </CardContent>
