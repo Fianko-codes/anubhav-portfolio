@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SectionHeader from '@/components/SectionHeader';
 import { Card, CardContent } from '@/components/ui/card';
@@ -164,8 +163,7 @@ const AboutPage = () => {
           <Card className="bg-secondary border-none mt-8">
             <CardContent className="p-6 italic text-muted-foreground">
               <p>
-                Yet, as the sun begins its descent, casting long shadows across the land, a sense of despair creeps in. 
-                I fear that I am becoming a forgotten relic, a footnote in the grand story of life.
+                "In the vast landscape of knowledge, I am but a traveler seeking to understand the patterns that connect us all to the universe."
               </p>
             </CardContent>
           </Card>

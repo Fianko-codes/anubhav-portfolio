@@ -126,7 +126,7 @@ const HomePage = () => {
               <div className="aspect-square w-full max-w-md mx-auto rounded-2xl bg-gradient-to-br from-primary/30 via-accent/20 to-blue-400/10 p-1">
                 <div className="h-full w-full rounded-xl glass flex items-center justify-center p-6">
                   <p className="text-center text-muted-foreground italic px-6">
-                    "Yet, as the sun begins its descent, casting long shadows across the land, a sense of despair creeps in. I fear that I am becoming a forgotten relic, a footnote in the grand story of life."
+                    "Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding."
                   </p>
                 </div>
               </div>
