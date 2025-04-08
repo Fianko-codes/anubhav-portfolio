@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Link } from 'react-router-dom';
 import { useElementOnScreen } from '@/hooks/useElementOnScreen';
+import InstallPWA from '@/components/InstallPWA';
 
 const HomePage = () => {
   const [heroRef, heroVisible] = useElementOnScreen({ threshold: 0.1 });
@@ -26,7 +27,7 @@ const HomePage = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               A curious mind exploring the world through math, code, and fitness.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button asChild size="lg">
                 <Link to="/projects">
                   View My Work
@@ -38,6 +39,9 @@ const HomePage = () => {
                   Get In Touch
                 </Link>
               </Button>
+            </div>
+            <div className="mt-2">
+              <InstallPWA />
             </div>
           </div>
           <div className="hidden md:block md:w-1/2">

@@ -4,13 +4,22 @@ import { Moon, Sun } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
 const ThemeToggle = () => {
-  const [isDarkTheme, setIsDarkTheme] = React.useState(true);
+  const [isDarkTheme, setIsDarkTheme] = React.useState(() => {
+    // Check localStorage for saved preference, default to dark if not found
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === "dark" : true;
+  });
+
+  React.useEffect(() => {
+    // Apply theme on mount and when it changes
+    document.documentElement.classList.toggle("light-mode", !isDarkTheme);
+    document.documentElement.classList.toggle("dark-mode", isDarkTheme);
+    // Save preference
+    localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
+  }, [isDarkTheme]);
 
   const toggleTheme = () => {
-    const newTheme = !isDarkTheme;
-    setIsDarkTheme(newTheme);
-    document.documentElement.classList.toggle("light-mode", !newTheme);
-    document.documentElement.classList.toggle("dark-mode", newTheme);
+    setIsDarkTheme(prev => !prev);
   };
 
   return (
