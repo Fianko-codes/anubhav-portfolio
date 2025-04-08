@@ -36,25 +36,27 @@ const CustomCursor = () => {
           top: `${position.y}px`,
         }}
       />
-      <style jsx="true">{`
-        .custom-cursor {
-          position: fixed;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          border: 2px solid hsl(var(--primary));
-          transform: translate(-50%, -50%);
-          pointer-events: none;
-          z-index: 9999;
-          transition: width 0.2s, height 0.2s, background-color 0.2s;
-        }
-        .pointer {
-          width: 15px;
-          height: 15px;
-          background-color: hsl(var(--primary));
-          mix-blend-mode: difference;
-        }
-      `}</style>
+      <style>
+        {`
+          .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid hsl(var(--primary));
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+          }
+          .pointer {
+            width: 15px;
+            height: 15px;
+            background-color: hsl(var(--primary));
+            mix-blend-mode: difference;
+          }
+        `}
+      </style>
     </>
   );
 };

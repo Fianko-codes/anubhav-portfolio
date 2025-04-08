@@ -14,7 +14,6 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
-import ThemeToggle from "./components/ThemeToggle";
 import CustomCursor from "./components/CustomCursor";
 import ChatBot from "./components/ChatBot";
 import KonamiEasterEgg from "./components/KonamiEasterEgg";
@@ -47,11 +46,6 @@ const App = () => {
           <ScrollToTop />
           <CustomCursor />
           <KonamiEasterEgg />
-          
-          <div className="fixed top-4 right-4 z-50">
-            <ThemeToggle />
-          </div>
-          
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />

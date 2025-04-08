@@ -18,7 +18,10 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="h-screen flex items-center" ref={heroRef}>
+      <section 
+        className="h-screen flex items-center" 
+        ref={heroRef as React.RefObject<HTMLElement>}
+      >
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="md:w-1/2">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -52,7 +55,10 @@ const HomePage = () => {
       </section>
 
       {/* Interactive Calculator Section */}
-      <section className="py-20 bg-background" ref={calculatorRef}>
+      <section 
+        className="py-20 bg-background" 
+        ref={calculatorRef as React.RefObject<HTMLElement>}
+      >
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-100 ${calculatorVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Interactive Math Tools</h2>
@@ -69,7 +75,10 @@ const HomePage = () => {
       </section>
 
       {/* Coding Challenge Section */}
-      <section className="py-20 bg-card" ref={challengeRef}>
+      <section 
+        className="py-20 bg-card" 
+        ref={challengeRef as React.RefObject<HTMLElement>}
+      >
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-200 ${challengeVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Test Your Coding Skills</h2>
@@ -86,7 +95,10 @@ const HomePage = () => {
       </section>
 
       {/* Featured Interests */}
-      <section className="py-20 bg-card" ref={interestsRef}>
+      <section 
+        className="py-20 bg-card" 
+        ref={interestsRef as React.RefObject<HTMLElement>}
+      >
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-300 ${interestsVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What Drives Me</h2>
@@ -140,7 +152,10 @@ const HomePage = () => {
       </section>
 
       {/* About Preview */}
-      <section className="py-20" ref={aboutRef}>
+      <section 
+        className="py-20" 
+        ref={aboutRef as React.RefObject<HTMLElement>}
+      >
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-400 ${aboutVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
