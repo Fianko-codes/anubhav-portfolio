@@ -5,15 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Link } from 'react-router-dom';
 import { useElementOnScreen } from '@/hooks/useElementOnScreen';
-import GraphingCalculator from '@/components/GraphingCalculator';
-import CodingChallenge from '@/components/CodingChallenge';
 
 const HomePage = () => {
   const [heroRef, heroVisible] = useElementOnScreen({ threshold: 0.1 });
   const [interestsRef, interestsVisible] = useElementOnScreen({ threshold: 0.1 });
-  const [calculatorRef, calculatorVisible] = useElementOnScreen({ threshold: 0.1 });
   const [aboutRef, aboutVisible] = useElementOnScreen({ threshold: 0.1 });
-  const [challengeRef, challengeVisible] = useElementOnScreen({ threshold: 0.1 });
 
   return (
     <div className="min-h-screen">
@@ -50,46 +46,6 @@ const HomePage = () => {
                 <span className="text-4xl font-bold text-gradient">AP</span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Calculator Section */}
-      <section 
-        className="py-20 bg-background" 
-        ref={calculatorRef as React.RefObject<HTMLElement>}
-      >
-        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-100 ${calculatorVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Interactive Math Tools</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Explore mathematical concepts with these interactive tools
-            </p>
-            <div className="h-1 w-20 bg-primary mt-4 mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="mt-8">
-            <GraphingCalculator />
-          </div>
-        </div>
-      </section>
-
-      {/* Coding Challenge Section */}
-      <section 
-        className="py-20 bg-card" 
-        ref={challengeRef as React.RefObject<HTMLElement>}
-      >
-        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 delay-200 ${challengeVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Test Your Coding Skills</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Try solving these programming challenges to sharpen your skills
-            </p>
-            <div className="h-1 w-20 bg-primary mt-4 mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="mt-8">
-            <CodingChallenge />
           </div>
         </div>
       </section>
