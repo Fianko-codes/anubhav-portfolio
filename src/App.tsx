@@ -14,6 +14,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
+import CustomCursor from "./components/CustomCursor";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <CustomCursor />
         <BrowserRouter>
           <ScrollToTop />
           <Navbar />
